@@ -1,0 +1,161 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Ayman Solomon — Art Director</title>
+  <meta name="description" content="Ayman Solomon, Art Director. Productions, motion graphics, social media and projects." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:opsz,wght@6..96,400;6..96,500&family=Manrope:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="ambient" aria-hidden="true"></div>
+  <div class="grain" aria-hidden="true"></div>
+
+  <!-- ============ HEADER ============ -->
+  <header class="site-header">
+    <a href="#top" class="logo" aria-label="Ayman Solomon — home">
+      <span>A</span><i></i><span>S</span>
+    </a>
+    <nav class="nav" aria-label="Primary">
+      <a href="#about">About</a>
+      <a href="#work">Work</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <button class="menu-btn" aria-label="Open menu" aria-expanded="false" aria-controls="menu"></button>
+  </header>
+
+  <div class="menu-overlay" id="menu" hidden>
+    <nav aria-label="Menu">
+      <a href="#about">About</a>
+      <a href="#work">Work</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </div>
+
+  <main id="top">
+    <!-- ============ HERO ============ -->
+    <section class="hero">
+      <h1 class="name">Ayman Solomon</h1>
+      <p class="role">Art Director</p>
+      <span class="rule" aria-hidden="true"></span>
+
+      <!--
+        Transport console.
+        To swap an icon for a GIF, add data-gif="path/to/file.gif" on the .key
+        (e.g. data-gif="assets/gifs/productions.gif"). The GIF fills the key
+        and keeps the key's colored lighting.
+      -->
+      <div class="stage">
+        <div class="console">
+          <a class="key key--record" href="#productions" style="--glow: var(--red)" data-gif="">
+            <span class="key-media"><span class="icon icon-record"></span></span>
+            <span class="key-label">Productions</span>
+          </a>
+          <a class="key key--play" href="#motion" style="--glow: var(--blue)" data-gif="">
+            <span class="key-media"><span class="icon icon-play"></span></span>
+            <span class="key-label">Motion Graphics</span>
+          </a>
+          <a class="key key--pause" href="#social" style="--glow: var(--ice)" data-gif="">
+            <span class="key-media"><span class="icon icon-pause"><b></b><b></b></span></span>
+            <span class="key-label">Social Media</span>
+          </a>
+          <a class="key key--stop" href="#projects" style="--glow: var(--white)" data-gif="">
+            <span class="key-media"><span class="icon icon-stop"></span></span>
+            <span class="key-label">Projects</span>
+          </a>
+        </div>
+
+        <!-- light on the floor -->
+        <div class="floor" aria-hidden="true">
+          <span class="streak"></span>
+          <span class="spill" style="--glow: var(--red)"></span>
+          <span class="spill" style="--glow: var(--blue)"></span>
+          <span class="spill" style="--glow: var(--blue)"></span>
+          <span class="spill" style="--glow: var(--white)"></span>
+        </div>
+      </div>
+
+      <a href="#work" class="scroll-cue">
+        <span class="scroll-line" aria-hidden="true"></span>
+        <span class="scroll-text">Scroll to explore</span>
+        <svg class="scroll-chevron" viewBox="0 0 28 14" aria-hidden="true"><path d="M1 1l13 12L27 1" /></svg>
+      </a>
+    </section>
+
+    <!-- ============ WORK ============ -->
+    <section class="section" id="work">
+      <header class="section-head reveal">
+        <p class="eyebrow">Selected Work</p>
+        <h2>Four channels, one vision.</h2>
+      </header>
+
+      <div class="work-grid">
+        <article class="work-card reveal" id="productions" style="--glow: var(--red)">
+          <div class="work-media"><span class="icon icon-record"></span></div>
+          <div class="work-body">
+            <p class="eyebrow">01 — Record</p>
+            <h3>Productions</h3>
+            <p>Commercials, branded films and shoots — concept through final frame.</p>
+          </div>
+        </article>
+        <article class="work-card reveal" id="motion" style="--glow: var(--blue)">
+          <div class="work-media"><span class="icon icon-play"></span></div>
+          <div class="work-body">
+            <p class="eyebrow">02 — Play</p>
+            <h3>Motion Graphics</h3>
+            <p>Title sequences, animated identities and kinetic type.</p>
+          </div>
+        </article>
+        <article class="work-card reveal" id="social" style="--glow: var(--ice)">
+          <div class="work-media"><span class="icon icon-pause"><b></b><b></b></span></div>
+          <div class="work-body">
+            <p class="eyebrow">03 — Pause</p>
+            <h3>Social Media</h3>
+            <p>Thumb-stopping campaigns and content systems built for the feed.</p>
+          </div>
+        </article>
+        <article class="work-card reveal" id="projects" style="--glow: var(--white)">
+          <div class="work-media"><span class="icon icon-stop"></span></div>
+          <div class="work-body">
+            <p class="eyebrow">04 — Stop</p>
+            <h3>Projects</h3>
+            <p>Personal work, experiments and collaborations.</p>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- ============ ABOUT ============ -->
+    <section class="section about" id="about">
+      <div class="about-inner reveal">
+        <p class="eyebrow">About</p>
+        <h2>Directing light, motion and story.</h2>
+        <p class="lead">
+          I'm Ayman Solomon, an art director shaping visual worlds for brands and artists —
+          from on-set productions to motion design and social-first campaigns.
+        </p>
+      </div>
+    </section>
+
+    <!-- ============ CONTACT ============ -->
+    <section class="section contact" id="contact">
+      <div class="contact-inner reveal">
+        <p class="eyebrow">Contact</p>
+        <h2>Let's make something.</h2>
+        <!-- TODO: replace with your real address -->
+        <a class="cta" href="mailto:hello@example.com">Get in touch</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <span>© <span id="year"></span> Ayman Solomon</span>
+    <span>Art Director</span>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
