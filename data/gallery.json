@@ -1,0 +1,8 @@
+{
+  "categories": {
+    "productions": { "columns": 3, "items": [] },
+    "motion": { "columns": 3, "items": [] },
+    "social": { "columns": 6, "items": [] },
+    "projects": { "columns": 3, "items": [] }
+  }
+}

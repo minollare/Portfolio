@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="robots" content="noindex" />
+  <title>Gallery Admin — Ayman Solomon</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:opsz,wght@6..96,400&family=Manrope:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="admin.css" />
+</head>
+<body>
+  <header class="bar">
+    <a class="brand" href="../" title="Open the site">
+      <span class="brand-mark">A<i></i>S</span>
+      <span class="brand-text">Gallery admin</span>
+    </a>
+    <div class="bar-right">
+      <span class="save-state" id="save-state" data-state="idle" aria-live="polite">All changes saved</span>
+      <a class="btn btn-ghost" id="view-site" href="../" target="_blank" rel="noopener">View site ↗</a>
+    </div>
+  </header>
+
+  <!-- shown when the server asks for a password -->
+  <section class="login" id="login" hidden>
+    <form class="login-card" id="login-form">
+      <h1>Sign in</h1>
+      <p>Enter the admin password to edit the gallery.</p>
+      <label for="password">Password</label>
+      <input id="password" type="password" autocomplete="current-password" required />
+      <p class="login-error" id="login-error" hidden>That password didn't work. Try again.</p>
+      <button class="btn btn-primary" type="submit">Sign in</button>
+    </form>
+  </section>
+
+  <!-- shown when the page isn't running on server.js -->
+  <section class="offline" id="offline" hidden>
+    <div class="login-card">
+      <h1>Start the admin server</h1>
+      <p>This page saves files through <code>server.js</code>. In the project folder, run:</p>
+      <pre><code>node server.js</code></pre>
+      <p>then open <a href="http://localhost:3000/admin/">http://localhost:3000/admin/</a>.</p>
+    </div>
+  </section>
+
+  <main class="app" id="app" hidden>
+    <nav class="tabs" id="tabs" aria-label="Categories"></nav>
+
+    <section class="panel" id="panel">
+      <div class="panel-head">
+        <div class="crumbs" id="crumbs"></div>
+        <div class="panel-tools" id="panel-tools"></div>
+      </div>
+
+      <label class="drop" id="drop">
+        <input type="file" id="file-input" multiple accept="image/*,video/*,.mov,.m4v" />
+        <span class="drop-icon" aria-hidden="true">
+          <svg viewBox="0 0 48 48"><path d="M24 32V12M15 21l9-9 9 9" /><path d="M8 30v6a4 4 0 004 4h24a4 4 0 004-4v-6" /></svg>
+        </span>
+        <span class="drop-title" id="drop-title">Drop images or videos here</span>
+        <span class="drop-sub">or <u>choose files</u> · JPG, PNG, GIF, WebP, MP4, WebM, MOV</span>
+      </label>
+
+      <ul class="uploads" id="uploads" aria-live="polite"></ul>
+
+      <p class="hint" id="hint">Drag cards to change the order. The first card shows first on the site.</p>
+      <ol class="grid" id="grid"></ol>
+      <p class="empty" id="empty" hidden></p>
+    </section>
+  </main>
+
+  <div class="drag-veil" id="drag-veil" hidden><span id="drag-veil-text">Drop to upload</span></div>
+  <div class="toast" id="toast" hidden><span id="toast-text"></span><button class="btn btn-ghost" id="toast-undo" type="button">Undo</button></div>
+
+  <script src="admin.js"></script>
+</body>
+</html>

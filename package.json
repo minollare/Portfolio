@@ -1,0 +1,12 @@
+{
+  "name": "ayman-solomon-portfolio",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Portfolio site with a curved gallery and a drag-and-drop admin.",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}
