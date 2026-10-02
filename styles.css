@@ -498,9 +498,7 @@ a { color: inherit; text-decoration: none; }
 
 .icon-record {
   border-radius: 50%;
-  background:
-    radial-gradient(35% 28% at 38% 28%, rgba(255, 255, 255, 0.75), transparent 70%),
-    radial-gradient(circle at 45% 40%, #ff5a68 0%, var(--red) 50%, #b8001a 100%);
+  background: var(--red);
 }
 
 .icon-play {
